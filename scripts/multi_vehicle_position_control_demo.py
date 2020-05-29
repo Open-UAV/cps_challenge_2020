@@ -48,9 +48,6 @@ class OffbPosCtl:
                 self.waypointIndex = 0
                 self.sim_ctr += 1
 
-
-
-
             if self.isReadyToFly:
                 des_x = self.locations[self.waypointIndex, 0]
                 des_y = self.locations[self.waypointIndex, 1]
