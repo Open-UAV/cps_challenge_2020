@@ -1,1 +1,15 @@
 /venv/
+/models/bishop-terrain/meshes/bishop.dae
+/models/bishop-terrain/meshes/bishop.obj
+/models/bishop-terrain/meshes/bishop.png
+/models/bishop-terrain/meshes/bishop-sep-2019.obj
+/models/bishop-terrain/meshes/bishop-sep-2019.stl
+/models/bishop-terrain/meshes/bishop-terrain-gray.obj.mtl
+/models/bishop-terrain/meshes/mars.stl
+/models/mars_jezero/meshes/bishop.dae
+/models/mars_jezero/meshes/bishop.obj
+/models/mars_jezero/meshes/bishop.png
+/models/mars_jezero/meshes/bishop-sep-2019.obj
+/models/mars_jezero/meshes/bishop-sep-2019.stl
+/models/mars_jezero/meshes/bishop-terrain-gray.obj.mtl
+/models/mars_jezero/meshes/mars.stl

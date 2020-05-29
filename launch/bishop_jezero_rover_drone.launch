@@ -5,14 +5,14 @@
     <!-- vehicle model and world -->
     <arg name="est" default="ekf2"/>
     <arg name="vehicle" default="plane"/>
-    <arg name="world" default="$(find cps_challenge_2020)/worlds/phase-2.world"/>
+    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/bishop-jezero.world"/>
     <!-- gazebo configs -->
     <arg name="gui" default="true"/>
     <arg name="debug" default="false"/>
     <arg name="verbose" default="false"/>
     <arg name="paused" default="false"/>
     <!-- Gazebo sim -->
-    <include file="$(find cps_challenge_2020)/launch/rover_world.launch">
+    <include file="$(find gazebo_ros)/launch/rover_world.launch">
         <arg name="gui" value="$(arg gui)"/>
         <arg name="world_name" value="$(arg world)"/>
         <arg name="debug" value="$(arg debug)"/>
@@ -27,7 +27,7 @@
         <!-- PX4 SITL and vehicle spawn -->
         <include file="$(find px4)/launch/single_vehicle_spawn_sdf.launch">
             <arg name="x" value="0"/>
-            <arg name="y" value="-2"/>
+            <arg name="y" value="0"/>
             <arg name="z" value="0"/>
             <arg name="R" value="0"/>
             <arg name="P" value="0"/>
