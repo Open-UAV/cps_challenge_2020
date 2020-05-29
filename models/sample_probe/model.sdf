@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+    <model name="sample_probe">
+<pose frame=''>0 0 0 1.57046 3.7e-05 -0.00352</pose>
+       <link name='base_link'>
+      <self_collide>0</self_collide>
+      <kinematic>1</kinematic>
+      <velocity_decay/>
+      <gravity>1</gravity>   
+      <visual name="visual">
+          <geometry>
+            <mesh>  
+          <uri>model://sample_probe/meshes/sample_probe.dae</uri>
+	</mesh>
+          </geometry>
+<material> <!-- Wheel material -->
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>1 0.1 0.2 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material> <!-- End wheel material -->
+        </visual>
+<collision name='base_link_inertia_collision'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>1</max_contacts>
+        <geometry>
+          <mesh>
+            <uri>model://sample_probe/meshes/sample_probe.dae</uri>
+       </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+           <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+</link>
+    </model>
+ </sdf>

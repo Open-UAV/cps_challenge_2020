@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="bishop-terrain">
+      <pose>0 0 8 0 0 0</pose>
+      <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+           <mesh><uri>model://bishop-terrain/meshes/bishop-sep-2019.obj</uri></mesh>
+        </geometry>
+          <max_contacts>10</max_contacts>
+
+      </collision>
+      <visual name="visual">
+        <geometry>
+           <mesh><uri>model://bishop-terrain/meshes/bishop-sep-2019.obj</uri></mesh>
+        </geometry>
+<material> <!-- Wheel material -->
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.9 0.49 0.06 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material> <!-- End wheel material -->
+      </visual>
+    </link>
+  </model>
+</sdf>
