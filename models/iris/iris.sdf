@@ -748,7 +748,7 @@
     </include>
     <joint name="cps_depth_camera_joint" type="revolute">
       <child>cps_depth_camera::link</child>
-      <parent>iris::base_link</parent>
+      <parent>iris_1::base_link</parent>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
