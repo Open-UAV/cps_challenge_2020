@@ -1,3 +1,6 @@
+# Accessing the OpenUAV simulation testbed 
+Register on https://cps-vo.org/group/CPSchallenge to get access to pre-configured docker container with 3D graphics, ROS, Gazebo, and PX4 flight stack. 
+
 # Scripts to control drone in PX4 Gazebo environment
 
 Look at `docking_demo.py` for code to attach and detach an object with a PX4 drone.
