@@ -27,7 +27,7 @@ class OffbPosCtl:
                               [83.7, -54.411, 20.89, orientation[0], orientation[1], orientation[2], orientation[3]],
                               [83.7, -54.411, 18.00, orientation[0], orientation[1], orientation[2], orientation[3]],
                               [83.7, -54.411, 27.89, orientation[0], orientation[1], orientation[2], orientation[3]],
-                              [-7, 4, 60, orientation[0], orientation[1], orientation[2], orientation[3]],
+                              [-0, 0, 1, orientation[0], orientation[1], orientation[2], orientation[3]],
                               # [-76, 425, 1, orientation[0],orientation[1],orientation[2],orientation[3]],
                               [0, 0, 0, 0, 0, 0, 0]
                               ])
@@ -115,7 +115,9 @@ class OffbPosCtl:
         if self.locations[self.waypointIndex, :].sum() == 0:
             self.des_pose.pose.position.x = self.curr_rover_pose.pose.position.x
             self.des_pose.pose.position.y = self.curr_rover_pose.pose.position.y
-            self.des_pose.pose.position.z = max(self.curr_rover_pose.pose.position.y, 40)
+            self.des_pose.pose.position.z = max(self.curr_rover_pose.pose.position.y, 10)
+            orientation = quaternion_from_euler(0, 0, 3.14/2)
+            self.des_pose.pose.orientation = Quaternion(orientation[0], orientation[1], orientation[2], orientation[3])
         return self.des_pose.pose
 
     def copy_pose(self, pose):
