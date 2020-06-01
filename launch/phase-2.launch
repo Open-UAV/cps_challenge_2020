@@ -90,7 +90,7 @@
       x: 0.0,
       y: 0.0,
       z: 0.0}}'"/>
-      <node name="gazebo_ros_link_attacher" pkg="gazebo_ros_link_attacher" type="arm-attach-phase-2.py"/>
+      <node name="gazebo_ros_link_attacher" pkg="gazebo_ros_link_attacher" type="arm_attach_phase_2.py"/>
 
 
 </launch>
